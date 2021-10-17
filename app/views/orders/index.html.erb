@@ -1,0 +1,32 @@
+<% @output.each do |order| %>
+    <div class="order">
+        <div class="row order-header">
+            <div class="col">
+                <h3>id: <%= order[:id] %></h3>
+            </div>
+            <div class="col order-header-amount">
+                <h3><%= order[:amount] %> $ </h3>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">price</th>
+                    <th scope="col">quantity</th>
+                    <th scope="col">sum</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% order[:items].each do |item|%>
+                    <tr>
+                        <td><%= link_to item[:name], item_path(item[:id]) %></td>
+                        <td><%= item[:price] %></td>
+                        <td><%= item[:quantity] %></td>
+                        <td><%= item[:sum] %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+<% end %>

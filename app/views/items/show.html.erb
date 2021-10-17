@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-4">
+        <% if @item.image? %>
+            <%= image_tag @item.image.url(:large) %>
+        <% else %>
+            <img src="https://cataas.com/cat?width=300&height=200" class="card-img-top" alt="...">
+        <% end %>
+    </div>
+    <div class="col">
+        <h1><%= @item.name %></h1>
+        <p><%= @item.description %></p>
+        <div class="row">
+            <div class="col">
+                <p><strong>Price: <%= @item.price %> $ <strong></p>
+            </div>
+        </div>
+    </div>
+</div>
+<% if user_signed_in? && current_user.admin %>
+    <div class="btn-group item-btn-group" role="group" aria-label="Basic example">
+        <%= link_to "Edit", edit_item_path(@item), type: 'button', class: 'btn btn-primary'%>
+        <%= link_to "Destroy", item_path(@item),
+                    class: "nav-link",
+                    method: :delete,
+                    class: 'btn btn-primary'%>
+    </div>
+<% end %>

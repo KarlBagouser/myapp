@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="http://68.183.220.177/css/styles.css">
+  </head>
+  <body>
+    <%= render "shared/menu" %>
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert" role="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+  </body>
+</html>

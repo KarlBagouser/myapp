@@ -1,0 +1,47 @@
+<div style='width: 500px'>
+  <%= form_with model: user do |form| %>
+    <div class="mb-3">
+      <%= form.label :first_name, class: 'form-label'  %>
+      <%= form.text_field :first_name, class: 'form-control' %>
+      <% user.errors.full_messages_for(:first_name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :last_name, class: 'form-label'  %>
+      <%= form.text_field :last_name, class: 'form-control' %>
+      <% user.errors.full_messages_for(:last_name).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :email, class: 'form-label'  %>
+      <%= form.email_field :email, class: 'form-control' %>
+      <% user.errors.full_messages_for(:email).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :password, class: 'form-label'  %>
+      <%= form.password_field :password, class: 'form-control' %>
+      <% user.errors.full_messages_for(:password).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="mb-3 form-check">
+      <%= form.label :admin, class: 'form-check-label' %>
+      <%= form.check_box :admin, class: 'form-check-input' %>
+      <% user.errors.full_messages_for(:admin).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="actions">
+        <%= form.submit "Sign up", class: 'btn btn-primary' %>
+      </div>
+  <% end %>
+</div>

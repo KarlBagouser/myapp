@@ -1,0 +1,25 @@
+<div>
+    order.id
+    order.amount
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">name</th>
+                <th scope="col">price</th>
+                <th scope="col">quantity</th>
+                <th scope="col">sum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%= order.items.each do |item|%>
+                <tr>
+                    <td><%= link_to item.name, item %></td>
+                    <td><%= item.price %></td>
+                    <td><%= item.price %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+
+    <%= order.items %>
+</div>

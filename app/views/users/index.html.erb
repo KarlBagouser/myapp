@@ -1,0 +1,27 @@
+<h1>Users</h1>
+<div class="row">
+    <div class="col-9">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">First_name</th>
+                    <th scope="col">Last_name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Admin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%= render @users %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="admin-pannel">
+            <h4>Admin tools</h4>
+            <%= link_to "Create new user", new_user_url, type: 'button', class: 'btn btn-primary'%>
+        </div>
+    </div>
+</div>

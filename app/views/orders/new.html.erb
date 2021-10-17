@@ -1,0 +1,35 @@
+<form action=<%= orders_create_path %> method='get'>
+    <% @items.each do |item| %>
+        <div class="row order-description">
+            <div class="col-3">
+                <% if item.image? %>
+                    <%= image_tag item.image.url(:small) %>
+                <% else %>
+                    <img src="https://cataas.com/cat?width=300&height=200" class="card-img-top" alt="...">
+                <% end %>
+            </div>
+            <div class="col-1">
+                <p><strong><%= item.name %></strong></p>
+            </div>
+            <div class="col-1">
+                <span id='p_<%= item.id%>'><%= item.price %></span> $
+            </div>
+            <div class="col-1">
+                <input type="number" name="items[][quantity]" value=1 id=<%= item.id %>>
+            </div>
+            <div class="col-6">
+
+            </div>
+            <input type="hidden" name="items[][id]" value=<%= item.id%>>
+        </div>
+    <% end %>
+    <div class="row order-total-price-div">
+        <div class="col">
+            <p class="order-total-proce">
+                Total price: <span id="sum"></span> $
+            </p>
+            <button class="btn btn-primary" type="submit">Create order</button>
+        </div>
+    </div>
+</form>
+<script src="http://68.183.220.177/js/new_order.js"></script>

@@ -1,0 +1,9 @@
+<h2><%= @user.first_name %> <%= @user.last_name %></h2>
+<p><strong>email: <strong><%= @user.email %></p>
+<br>
+<%= link_to "Edit", edit_user_path(@user), type: 'button', class: 'btn btn-primary user-edit-btn'%>
+<%= button_to "Destroy", user_path(@user),
+    method: :delete,
+    data: { confirm: "Are you sure?" },
+    remote: true,
+    type: 'button', class: 'btn btn-primary user-delete-btn'%>

@@ -1,0 +1,83 @@
+#orders_btn {
+    border-radius: 62px;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.admin-pannel {
+    background-color: rgb(0 137 255 / 20%);
+    min-height: 50px;
+    padding: 10px;
+}
+
+.item-btn-group {
+    padding-top: 10px
+}
+
+.item-card {
+    min-width: 330px;
+}
+
+.item-card-image {
+    padding: 10px;
+    text-align: center;
+}
+
+.item-card-body {
+    padding-top: 0px;
+}
+
+.item-card-checkbox {
+    width: 100%;
+}
+
+.item-card-body-price {
+    text-align: end;
+    padding-top: 5px;
+}
+
+.order {
+    padding: 10px;
+}
+
+.order-header {
+    background-color: #0e70ff47;
+}
+
+.order-header-amount {
+    text-align: end;
+}
+
+.order-total-proce {
+    text-align: end; width: 50%;
+    background-color: #0d6efd40;
+    margin-top: 10px;
+    margin-bottom: 10px"
+}
+
+.order-total-price-div {
+    padding-top: 20px;
+}
+
+.default-img {
+    height: 100px; width:auto;
+}
+
+.order-description {
+    padding-top: 20px;
+}
+
+
+
+.user-edit-btn {
+    width: 100px;
+    margin-top: 10px
+}
+
+.user-delete-btn {
+    width: 100px;
+    margin-top: 10px
+}

@@ -1,0 +1,23 @@
+<div class="col item-card">
+  <div class="card">
+    <div class="item-card-image">
+      <% if item.image? %>
+        <%= image_tag item.image.url(:small) %>
+      <% else %>
+        <img src="https://cataas.com/cat?width=300&height=200" class="card-img-top" alt="...">
+      <% end %>
+    </div>
+    <div class="card-body item-card-body">
+      <h5 class="card-title"><%= link_to item.name, item, class: 'navbar-brand' %></h5>
+      <div class="row">
+        <div class="col md-6">
+          <input type="checkbox" class="btn-check item-card-checkbox" name="items[]" value=<%=item.id%> id=<%=item.id%> autocomplete="off">
+          <label class="btn btn-outline-primary" for=<%=item.id%>>Buy</label><br>
+        </div>
+        <div class="col md-6 item-card-body-price">
+          <p class="card-text"><strong>Price: <%= item.price %> $ </strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
